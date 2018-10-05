@@ -11,7 +11,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 
-namespace AperiTech_AzureDevOps_api
+namespace AperiTech_AzureDevOps_test
 {
     public class Startup
     {
@@ -25,6 +25,7 @@ namespace AperiTech_AzureDevOps_api
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddCors();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
 
@@ -41,6 +42,7 @@ namespace AperiTech_AzureDevOps_api
             }
 
             app.UseHttpsRedirection();
+            app.UseCors();
             app.UseMvc();
         }
     }
