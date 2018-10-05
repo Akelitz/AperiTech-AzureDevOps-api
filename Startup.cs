@@ -11,7 +11,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 
-namespace AperiTech_AzureDevOps_test
+namespace AperiTech_AzureDevOps_api
 {
     public class Startup
     {
